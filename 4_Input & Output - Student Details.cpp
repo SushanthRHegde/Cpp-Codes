@@ -1,5 +1,6 @@
 #include <iostream>
-#include <iomanip> //for setprecision and fixed
+#include <iomanip>
+#include <cmath> // For the round function
 using namespace std;
 
 int main() {
@@ -15,6 +16,9 @@ int main() {
     cin >> cgpa;
     cin >> grade;
     
+    // Round the CGPA to 2 decimal places
+     cgpa = floor(cgpa * 100) / 100;
+
     // Output the details of the student
     cout << "Name: " << name << endl;
     cout << "Age: " << age << endl;
